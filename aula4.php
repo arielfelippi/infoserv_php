@@ -35,3 +35,18 @@ while($contador >= 0) {
     $contador--;
 }
 
+echo "<br>";
+
+/**
+ *  Calcular o fatorial de 5 (5!)
+ * 5 * 4 * 3 * 2 * 1 = 120;
+ * utilizar laço de repetição
+ */
+$numero = 5;
+$fatorial = 0; // vai ser alterado o valor dentro do laço(120)
+
+for($numero = 5; $numero > 0; $numero--) {
+    $fatorial = $numero * 5;
+}
+
+echo "o fatorial de $numero é: $fatorial"; 

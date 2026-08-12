@@ -49,3 +49,12 @@ if ( isset($valor) ) {
 } else {
     echo "[isset] Esta vazio.";
 }
+
+$numero = 10; // ler numero do usuario (Fixo || mock)
+
+/**
+ * Utilizar o operador modulo %
+ * para descobrir se o numero informado pelo usuario é par
+ * se for par exibir é par e o numero lido. Senao, exibir é impar e o numero lido.
+ */
+
