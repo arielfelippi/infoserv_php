@@ -42,11 +42,43 @@ echo "<br>";
  * 5 * 4 * 3 * 2 * 1 = 120;
  * utilizar laço de repetição
  */
-$numero = 5;
-$fatorial = 0; // vai ser alterado o valor dentro do laço(120)
 
-for($numero = 5; $numero > 0; $numero--) {
-    $fatorial = $numero * 5;
+$numeroEscolhido = 5;
+$fatorial = 1; // vai ser alterado o valor dentro do laço(120)
+
+for($numero = $numeroEscolhido; $numero > 0; $numero--) {
+    $fatorial *= $numero;
 }
 
-echo "o fatorial de $numero é: $fatorial"; 
+echo "o fatorial de $numeroEscolhido é: $fatorial"; 
+
+echo "<br>";
+
+/**
+ * Calcular e exibir a tabuada do 5 utilizando laço FOR.
+ * Resultado esperado:
+ * 5 x 1 = 5
+ * 5 x 2 = 10
+ * ...
+ * 5 x 10 = 50
+ * 
+ */
+
+echo "<br>";
+
+/**
+ * Calcular e exibir todos os numeros pares de 2 até 50.
+ * Sem pular de 2 em 2 no FOR;
+ * 
+ * Dica: utilizar formula do numeros pares.
+ */
+
+echo "<br>";
+
+/**
+ * Calcular e exibir os 5 primeiros numeros primos.
+ * 
+ * Dica: utilizar formula do numeros pares.
+ */
+
+echo "<br>";
