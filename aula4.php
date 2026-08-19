@@ -64,6 +64,13 @@ echo "<br>";
  * 
  */
 
+$numero = 5;
+
+for ($i = 1; $i <= 10; $i++) {
+    $resultado = $numero * $i;
+    echo "$numero X $i = $resultado <br>"; 
+}
+
 echo "<br>";
 
 /**
@@ -72,6 +79,16 @@ echo "<br>";
  * 
  * Dica: utilizar formula do numeros pares.
  */
+
+for ($numero = 2; $numero <= 50; $numero++) {
+    $resto = $numero % 2;
+    $ehPar = $resto == 0;
+
+    if ($ehPar) {
+        echo "O $numero é par. <br>";
+    }
+
+}
 
 echo "<br>";
 
