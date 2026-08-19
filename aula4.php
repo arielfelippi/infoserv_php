@@ -77,8 +77,11 @@ echo "<br>";
 
 /**
  * Calcular e exibir os 5 primeiros numeros primos.
+ * Os 5 primeiros primos sao: 2, 3, 5, 7, 11.
  * 
  * Dica: utilizar formula do numeros pares.
+ * e uma vairavel $limitePrimos = 5.
+ * Serão 2 FOR um dentro do outro FOR
  */
 
 echo "<br>";
