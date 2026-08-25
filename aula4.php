@@ -47,7 +47,8 @@ $numeroEscolhido = 5;
 $fatorial = 1; // vai ser alterado o valor dentro do laço(120)
 
 for($numero = $numeroEscolhido; $numero > 0; $numero--) {
-    $fatorial *= $numero;
+    // $fatorial = $fatorial * $numero;
+    $fatorial *= $numero; // 5 * 4 * 3 ...
 }
 
 echo "o fatorial de $numeroEscolhido é: $fatorial"; 
@@ -100,5 +101,32 @@ echo "<br>";
  * e uma vairavel $limitePrimos = 5.
  * Serão 2 FOR um dentro do outro FOR
  */
+
+$limitePrimos = 5;
+$contadorLimitePrimos = 0;
+
+for ($numeroAvaliado = 2; $contadorLimitePrimos < $limitePrimos; $numeroAvaliado++) {
+
+    $ehPrimo = true;
+    $penultimoNumero = $numeroAvaliado - 1;
+
+    for ($divisor = 2; $divisor <= $penultimoNumero; $divisor++) {
+        
+        $resto = $numeroAvaliado % $divisor;
+        $naoEhPrimo = $resto == 0; // divisão exata
+
+        if ($naoEhPrimo) {
+            $ehPrimo = false;
+
+            break;
+        }
+
+    }
+
+    if ($ehPrimo) {
+        $contadorLimitePrimos++;
+        echo "O número $numeroAvaliado é primo.<br>";
+    }
+}
 
 echo "<br>";
