@@ -130,3 +130,83 @@ for ($numeroAvaliado = 2; $contadorLimitePrimos < $limitePrimos; $numeroAvaliado
 }
 
 echo "<br>";
+
+$funcionarios = []; // array vazio === 0(size | lenght)
+$funcionarios = array(); // array vazio === 0
+$numeros = [123, 25]; // tamanho 2 === 2
+                // 0, 1 
+$funcionarios = ["Ariel", "Maria", "Joao"]; // 3 === 3
+//                0,      1,       2
+
+foreach($funcionarios as $funcionario) {
+    echo $funcionario . "<br>";
+}
+
+echo "<br>FOR<br>";
+$tamanhoArray = count($funcionarios); //3
+
+for($i = 0; $i < $tamanhoArray; $i++) {
+    // echo $funcionarios[0] . "<br>"; Ariel
+    // echo $funcionarios[1] . "<br>"; Maria
+    // echo $funcionarios[2] . "<br>"; Joao
+    echo $funcionarios[$i] . "<br>";
+}
+
+echo "<br>";
+
+$funcionariosArrayAssociativo = [
+    "nome" => "Ariel", 
+    "cargo" => "Professor",
+    "salario" => "5000"
+];
+
+foreach($funcionariosArrayAssociativo as $chave => $funcionario) {
+    echo "$chave: $funcionario <br>";
+}
+
+
+$funcionariosArrayAssociativo = [
+    "nome" => "Ariel", 
+    "cargo" => "Professor",
+    "salario" => "5000"
+];
+
+echo "<br>";
+
+/**
+ * Utilizar o array anterior e aplicar os itens abaixo:
+ * 
+ * Conceder 10 % de aumento para cada funcinario.
+ * Adicionar setor do funcionario.
+ * Adicionar desconto do INSS do funcionario.
+ */
+
+$funcionariosArrayAssociativo = [
+    "nome" => "Ariel", 
+    "cargo" => "Professor",
+    "salario" => "5000",
+    "setor" => "educação",
+    "descontoINSS" => "230",
+];
+
+
+$percentual = 10;
+$percentualAumento = $percentual / 100;
+$salario = $funcionariosArrayAssociativo["salario"];
+$aumento = $salario * $percentualAumento;
+$aumentoFormat = formatarParaReal($aumento);
+$novoSalario = formatarParaReal($salario + $aumento);
+$salarioAntigo = formatarParaReal($salario);
+
+echo "R$ ". formatarParaReal(10.49);
+echo "<br>";
+
+echo "O salário era de: $salarioAntigo o aumento foi de $aumentoFormat e seu novo salário é: $novoSalario";
+
+function formatarParaReal(float $valor): string {
+    $valorFormatado = number_format($valor, 2, ',', '.');
+
+    return $valorFormatado;
+}
+
+echo "<br>";
