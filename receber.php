@@ -21,6 +21,8 @@ $setor = $_POST["setor"] ?? "";
 $salario = $_POST["salario"] ?? "";
 $cracha = $_POST["cracha"] ?? "";
 
+$sql = "INSERT INTO funcionario nome, sobrenome VALUES ('Ariel', 'Felippi');";
+
 ?>
 
 <!DOCTYPE html>
