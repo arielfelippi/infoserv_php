@@ -5,6 +5,7 @@
  * [
     "nome"=> "Ariel",
     "sobrenome"=> "Felippi",
+    "nomeCompleto"=> "Ariel Felippi",
  * ]
 
     $dadosFuncionario = $_POST ?? [];
@@ -21,7 +22,11 @@ $setor = $_POST["setor"] ?? "";
 $salario = $_POST["salario"] ?? "";
 $cracha = $_POST["cracha"] ?? "";
 
-$sql = "INSERT INTO funcionario nome, sobrenome VALUES ('Ariel', 'Felippi');";
+$sql = "INSERT INTO funcionario (nome, sobrenome) VALUES ('Ariel', 'Felippi');";
+
+// CRUD => Create(insert), Read(Select), Update e Delete.
+
+$nome . " " . $sobrenome; // Concatenar
 
 ?>
 

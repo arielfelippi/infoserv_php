@@ -30,8 +30,11 @@ CREATE TABLE `funcionario` (
   `cargo` varchar(100) NOT NULL,
   `setor` varchar(100) NOT NULL,
   `cracha` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `idPessoa` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `funcionario_pessoa_FK` (`idPessoa`),
+  CONSTRAINT `funcionario_pessoa_FK` FOREIGN KEY (`idPessoa`) REFERENCES `pessoa` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,8 +43,34 @@ CREATE TABLE `funcionario` (
 
 LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
-INSERT INTO `funcionario` VALUES (1,'Ariel','Felippi',12345,'Professor','educação','4560');
+INSERT INTO `funcionario` VALUES (2,'Ariel','Felippi',132456789,'Professor','Educação','4560',1),(3,'Maria','Silva',45612312,'Professora','Educação','4565',4),(4,'Fulano','Borges',45612,'Zelador','Administrativo','3852',NULL),(5,'Pedro','Santana',456789123,'Diretor','Educação','00123',NULL);
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pessoa`
+--
+
+DROP TABLE IF EXISTS `pessoa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `pessoa` (
+  `id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pessoa`
+--
+
+LOCK TABLES `pessoa` WRITE;
+/*!40000 ALTER TABLE `pessoa` DISABLE KEYS */;
+INSERT INTO `pessoa` VALUES (1,'Ariel','ariel@infoserv.com','54123456789'),(2,'Fulano','fulano@infoserv.com','54987654321'),(3,'Pedro','pedro@infoserv.com','54789456789'),(4,'Maria','maria@infoserv.com','54321678893');
+/*!40000 ALTER TABLE `pessoa` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -57,4 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-09-08 21:50:09
+-- Dump completed on 2026-09-22 20:50:38
