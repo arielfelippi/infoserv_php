@@ -47,9 +47,15 @@ sudo vim /etc/apache2/sites-available/000-default.conf
 # MariaDB
 
 ## Executar no terminal os comandos abaixo
-sudo service mariadb start
 
-sudo mysql -uroot -p
+### Iniciar serviço do banco
+`sudo service mariadb start`
+
+### Acessar o banco mariadb/mysql
+`sudo mysql -uroot -p`
+
+
+### Executar no terminal os comandos abaixo
 
 ```BASH
    CREATE database infoserv;
