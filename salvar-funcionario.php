@@ -2,7 +2,6 @@
 
 require_once "./conexao.php";
 
-$idFuncionario = $_POST["id"] ?? 0;
 $nome = $_POST["nome"] ?? "";
 $sobrenome = $_POST["sobrenome"] ?? "";
 $cargo = $_POST["cargo"] ?? "";
@@ -16,9 +15,14 @@ $valores = "VALUES ('$nome', '$sobrenome', '$salario', '$cargo', '$setor', '$cra
 
 $sql .= $campos . $valores;
 
-$conexao->query($sql);
+/**
+ * INSERT INTO funcionario
+ * ( nome, sobrenome, salario, cargo, setor, cracha, idPessoa)
+ * VALUES('', '', 0, '', '', '', NULL);
+ */
 
 $resultado = $conexao->query($sql);
 
 header("Location: listar-funcionarios.php");
 exit;
+ // http://localhost/infoserv_php/listar-funcionarios.php

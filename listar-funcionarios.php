@@ -10,7 +10,7 @@ $resultado = $conexao->query($sql);
 
 <h1>Funcionários</h1>
 
-<a href="form-funcionario.php">Novo funcionário</a>
+<a href="form-funcionario.php">Cadastrar funcionário</a>
 
 <br><br>
 
@@ -18,7 +18,7 @@ $resultado = $conexao->query($sql);
     if (empty($resultado)) {
  ?>
  
- <p>Sem dados para exibir.</p>
+ <p><b>Sem dados para exibir.</b></p>
 
  <?php } else { ?>
 
