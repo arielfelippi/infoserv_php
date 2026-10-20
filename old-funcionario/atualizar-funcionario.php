@@ -57,3 +57,10 @@ function retornarParaListagem() {
     header("Location: listar-funcionarios.php");
     exit;
 }
+/**
+ * MVC (Padrão de Arquitetura)
+ * Model - FuncionarioModel.php (banco [CRUD])
+ * View - FuncionarioView.php (tela [html + css + js/ts])
+ * Controller - FuncionarioController.php (backend [PHP])
+ */
+ 
