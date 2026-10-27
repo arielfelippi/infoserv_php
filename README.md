@@ -20,13 +20,18 @@ sudo vim /etc/apache2/sites-available/000-default.conf
    <VirtualHost *:80>
       ServerName localhost
       ServerAlias localhost
+      ServerAdmin webmaster@localhost
       DocumentRoot "/var/www/html"
       <Directory "/var/www/html/">
          Options +Indexes +Includes +FollowSymLinks +MultiViews
          AllowOverride All
          Require all granted
       </Directory>
+      #LogLevel info ssl:warn
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
    </VirtualHost>
+   # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 ```
 
 - Para sair do editor VIM pressionar `ESC` seguido de `:wq!`
