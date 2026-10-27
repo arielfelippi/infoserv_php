@@ -9,6 +9,7 @@ git clone LINK_GITHUB da um enter. Novamente, file open folder: seleciona tudo e
 # Configurar apache para aceitar rotas
 - Editar o arquivo
 ```bash
+sudo cp -R /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf-bkp
 sudo vim /etc/apache2/sites-available/000-default.conf
 ```
 
