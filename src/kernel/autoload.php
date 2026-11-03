@@ -5,7 +5,7 @@ spl_autoload_register(function (string $nomeDaClasse): void {
         APP_PATH . "/kernel",
         APP_PATH . "/database",
 
-        APP_PATH . "/controllers/",
+        APP_PATH . "/controllers",
         APP_PATH . "/controllers/funcionario",
         APP_PATH . "/controllers/pessoa",
 
@@ -18,6 +18,8 @@ spl_autoload_register(function (string $nomeDaClasse): void {
 
     foreach ($pastas as $pasta) {
         $caminhoArquivo = $pasta . "/" . $nomeDaClasse . ".php";
+
+        // var_dump($caminhoArquivo);
 
         if (file_exists($caminhoArquivo)) {
             require_once $caminhoArquivo;
