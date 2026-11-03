@@ -13,6 +13,15 @@ sudo cp -R /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-avai
 sudo vim /etc/apache2/sites-available/000-default.conf
 ```
 
+- Selecionar tudo e apagar
+```bash
+   esc
+   gg
+   shift + g
+   shift + v
+   delete
+```
+
 - Para editar pressionar a tecla insert
 
 - Adcionar o conteudo de directory(abaixo): <Directory "/var/www/html/">...</Directory>
