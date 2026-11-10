@@ -2,11 +2,18 @@
 
 session_start();
 
-require_once "./src/config/conexao.php";
-require_once "./src/database/BancoDeDados.php";
-require_once "./src/models/funcionario/FuncionarioModel.php";
-require_once "./src/controllers/funcionario/FuncionarioController.php";
+require_once APP_PATH . "/config/app.php";
+require_once APP_PATH . "/config/conexao.php";
+
+require_once APP_PATH . "/kernel/autoload.php";
+require_once APP_PATH . "/kernel/helpers.php";
+
+$homeController = new HomeController();
 
 $bancoDeDados = new BancoDeDados($conexao);
+
 $funcionarioModel = new FuncionarioModel($bancoDeDados);
 $funcionarioController = new FuncionarioController($funcionarioModel);
+
+$pessoaModel = new PessoaModel($bancoDeDados);
+$pessoaController = new PessoaController($pessoaModel);
