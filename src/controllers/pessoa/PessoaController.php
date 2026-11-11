@@ -21,9 +21,15 @@ class PessoaController extends BaseController
             $this->mensagemErro("Erro ao listar pessoas: " . $erro->getMessage());
         }
 
-        $this->view("pessoa/listar", [
-            "pessoas" => $pessoas,
-        ]);
+        $dados["pagina"] = "pessoa/listar";
+        $dados["titulo"] = "Sistema Infoserv - Pessoas";
+        $dados["dados"] = $pessoas;
+
+        $this->view("principal", $dados);
+
+        // $this->view("pessoa/listar", [
+        //     "pessoas" => $pessoas,
+        // ]);
     }
 
     public function novo(): void

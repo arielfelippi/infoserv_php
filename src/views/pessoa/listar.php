@@ -6,7 +6,7 @@
 
 <br><br>
 
-<?php if (empty($pessoas)): ?>
+<?php if (empty($dados)): ?>
     <p>Nenhuma pessoa encontrada.</p>
 <?php else: ?>
     <table border="1" cellpadding="8">
@@ -18,7 +18,7 @@
             <th>Ações</th>
         </tr>
 
-        <?php foreach ($pessoas as $pessoa): ?>
+        <?php foreach ($dados as $pessoa): ?>
             <tr>
                 <td><?= escapar($pessoa->getId()) ?></td>
                 <td><?= escapar($pessoa->getNome()) ?></td>
