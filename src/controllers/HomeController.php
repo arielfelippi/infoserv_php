@@ -2,16 +2,20 @@
 
 class HomeController extends BaseController
 {
+    public function index() {
+        $this->view("welcome");
+    }
+    
     public function listar(): void
     {
-        $dados = [
+        $dados["pagina"] = "home";
+        $dados["titulo"] = "Sistema Infoserv - Home";
+        $dados["dados"] = [
             "funcionarios" => "Funcionários",
             "pessoas" => "Pessoas"
         ];
 
-        $this->view("home", [
-            "dados" => $dados,
-        ]);
+        $this->view("principal", $dados);
     }
 
 }
