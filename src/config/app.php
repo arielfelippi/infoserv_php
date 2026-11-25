@@ -17,3 +17,6 @@
 |
 */
 define("BASE_URL", "/infoserv_php");
+
+// /infoserv_php/src/public/assets
+define("PUBLIC_ASSETS", BASE_URL . "/src/public/assets");

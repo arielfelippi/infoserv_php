@@ -15,6 +15,7 @@ return [
     ['POST', '/funcionarios/{id}/deletar', [$funcionarioController, 'deletar']],
 
     ['GET', '/pessoas', [$pessoaController, 'listar']],
+    ['GET', '/pessoas/js', [$pessoaController, 'listarJS']],
     ['GET', '/pessoas/novo', [$pessoaController, 'novo']],
     ['POST', '/pessoas', [$pessoaController, 'criar']],
     ['GET', '/pessoas/{id}/editar', [$pessoaController, 'editar']],

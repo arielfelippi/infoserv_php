@@ -32,6 +32,21 @@ class PessoaController extends BaseController
         // ]);
     }
 
+    public function listarJS()
+    {
+        try {
+            $pessoas = $this->pessoaModel->listar();
+        } catch (Exception $erro) {
+            $pessoas = [];
+
+            $this->mensagemErro("Erro ao listar pessoas: " . $erro->getMessage());
+        }
+
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode($pessoas);
+        exit();
+    }
+
     public function novo(): void
     {
         $this->view("pessoa/form", [
